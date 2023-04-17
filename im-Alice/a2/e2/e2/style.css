@@ -1,0 +1,112 @@
+@font-face {
+  font-family: lemonmilk;
+  src: url(./fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+  font-family: louisgeogrecafe;
+  src: url(./fonts/louis_george_caf/Louis\ George\ Cafe.ttf);
+}
+
+@font-face {
+  font-family: thequeen;
+  src: url(./fonts/the_queen/TheQueen-Regular.ttf);
+}
+
+@font-face {
+  font-family: louisgeogrecafethick;
+  src: url(./fonts/louis_george_caf/Louis\ George\ Cafe\ Bold.ttf);
+}
+
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/*
+The color combination I chose for my website was inspired by the 19th combination on: https://visme.co/blog/website-color-schemes/
+*/
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: #eae7dc;
+  color: #787774;
+  padding: 2vw;
+  font-family: louisgeogrecafe;
+}
+
+a {
+  color:#e85a4f;
+}
+
+summary {
+  font-size: 18px;
+}
+
+summary:hover {
+  cursor: pointer;
+}
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+
+.assignment {
+  text-align: center;
+  font-family: thequeen;
+  font-size: 60px;
+  padding-bottom: none;
+}
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  margin: 10px;
+  padding: 50px;
+  background-color: #e6d1b5da;
+}
+
+.FilterBox{
+  background-color: #f8f5f546;
+  float: left;
+  margin-right: 100px;
+}
+
+.FilterButton{
+  border: transparent;
+  font-family: louisgeogrecafe;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.FilterButton:hover {
+  cursor: pointer;
+}
+
+.RecipeName{
+  font-family: lemonmilk;
+  text-align: center;
+  font-size: 25px;
+}
+
+.Author{
+  text-align: right;
+  margin-right: 200px;
+  color: #65635d;
+  font-family: louisgeogrecafethick;
+}
+
+.RecipeImg{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.Attribution{
+  text-align: center;
+  font-size: 14px;
+}
