@@ -51,3 +51,9 @@ input[type=range] {
     margin: 2px;
 }
 
+button:hover {
+  background: #f27fffcb;
+}
+button:active {
+  background: #ff80d1aa;
+}
