@@ -60,9 +60,10 @@ function draw(e) {
         ctx.lineWidth++;
     }
   }
-  if (brush == 'default' || brush == 'eraser') {
-    newBrushsize();
+  else {
+      newBrushsize(strokeWidthSlider.value); //So that the brush size is the value on the slider, not the value of the last point of the stroke of hue brush.
   }
+
  }
 
  // Brush options
