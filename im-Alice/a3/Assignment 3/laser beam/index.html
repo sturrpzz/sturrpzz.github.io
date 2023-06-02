@@ -21,13 +21,22 @@
         <canvas id="canvas" style="z-index: -1; position: fixed;"></canvas>
         
         <div id="sidebar" style="z-index: 10;">
-            <input class="sidebar1" id="strokeWidthSlider" type="range" min="1" max="100" step="1" value="20"></input><br>
+            <input id="strokeWidthSlider" type="range" min="1" max="100" step="1" value="20"></input><br>
             <button class="sidebar" id="defaultBrush" onclick="selectDefault()" title="What does this button do?"></button>
             <button class="sidebar" id="hueBrush" onclick="selectHue()" title="I like rainbow"></button>
             <button class="sidebar" id="random" onclick="selectRandom()" title="Mess around and find out"></button>
             <button class="sidebar" id="resetCanvas" onclick="selectReset()" title="Self destruct"></button>
             <a href="https://sturrpzz.github.io/im-Alice/a3/Assignment%203/normal%20canvas/"><button class="sidebar" id="normalcanvas" title="This is normal"></button></a>
-            <a href="https://sturrpzz.github.io/im-Alice/a3/Assignment%203/stars/"><button class="sidebar" id="star" title="Afterimage"></button></a>    
+            <a href="https://sturrpzz.github.io/im-Alice/a3/Assignment%203/stars/"><button class="sidebar" id="star" title="Afterimage"></button></a>
+            <button class="sidebar" id="text" onclick="displayText()" title="Notes"></button>
+            <div id="textField">
+                Translucent Feedback is my pairing for this assignment. As I learnt more about JavaScript, my inspiration has differed greatly from what I proposed in my presentation. I designed my website based on a laser beam performance I attended two years ago. I created three different projects to describe three different experiences of mine in that performance. My website is basically a canvas, which allows the user to interact with different brushes and create their own piece of art, just like how the laser created drawings in front of my eyes. <br>
+                The first project – called “Laser beam” - portrays the laser beams of different colours fading in and out of the darkness. It was the physical representation of what I saw in the performance. The laser beams were of different colours and sizes and moved so smoothly like a paint brush. There are trails of light fading after the laser beams, and after the trail fades out on the canvas, you can see a faint afterimage, portraying the afterimage I saw after seeing the bright beams on a completely dark background. <br>
+                The second project – called “Normal canvas” – is meant to portray the mental images that I associated with as I witnessed the work of art in progress. It was not to fade away, but to be stuck in my mind, hence the reason why the brush strokes in this project stayed instead of fading away like the first project.
+                The last project – called “Stars” – was a representation of the afterimages I saw when the laser beams disappeared and the whole room fell into darkness. Have you ever been in a very dark room and suddenly something extremely bright shone in your eyes, and when you blink there would be afterimages of that light floating around? That was what I was experiencing, however, it was a much more surreal experience. I could remember very vividly how the room fell into darkness and complete silence, and I was just in my own world. Every time I blinked, there were sparkly dots of pink and yellow floating on the black background, and as I kept blinking, they would multiply and branch out. Maybe there was something wrong with my eyes back then, but it was still an extremely fascinating experience. Similar to my first project, the brush strokes would slowly fade out, just like how these dots slowly disappeared if I kept my eyes open for too long. I chose not to include any elements on this canvas to demonstrate how I felt like I was in a completely different dimension at that moment, disconnected from everything around me. <br>
+                Another reason why I chose to create a canvas for my projects was because I was offered to interact with the laser beams by the artists. As I messed around with the different colours and felt the heat from the laser, I could not help but feel like I was drawing, not with pens, but with light. It was such a bizarre and strange experience for me, and inspired me to create these projects.
+
+            </div>    
         </div>
     <script src="index.js"></script>
     

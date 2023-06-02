@@ -1,3 +1,8 @@
+@font-face {
+  font-family: louisgeogrecafe;
+  src: url("./louis_george_caf/Louis\ George\ Cafe\ Light.ttf");
+}
+
 body {
     background: black;
 }
@@ -56,4 +61,19 @@ button:hover {
 }
 button:active {
   background: #ff80d1aa;
+}
+
+#textField {
+  z-index: 10; 
+  display: none; 
+  color: rgb(0, 255, 251);
+  width: 70%;
+  height: auto;
+  margin-left: 214px;
+  margin-top: 10px;
+  padding: 14px;
+  font-family: louisgeogrecafe;
+  font-size: 16px;
+  border: solid;
+  border-color: rgba(255, 255, 255, 0.625);
 }

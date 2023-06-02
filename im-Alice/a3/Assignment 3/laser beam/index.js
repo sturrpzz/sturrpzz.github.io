@@ -59,9 +59,10 @@ function draw(e) {
         ctx.lineWidth++;
     }
   }
-  if (brush == 'default' || brush == 'random') {
-    newBrushsize();
+  else {
+      newBrushsize(strokeWidthSlider.value); //So that the brush size is the value on the slider, not the value of the last point of the stroke of hue brush.
   }
+
  }
 
  // Brush options
@@ -93,6 +94,17 @@ function selectHue() {
 
 function selectReset() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+//Reveal text button
+
+function displayText() {
+  var text = document.getElementById("textField");
+  if (text.style.display == 'none') {
+    text.style.display = 'block';
+} else {
+    text.style.display = 'none';
+}
 }
 
 canvas.addEventListener('mousedown', (e) => {
