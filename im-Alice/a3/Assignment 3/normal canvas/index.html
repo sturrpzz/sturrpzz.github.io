@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+            <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>Normal Canvas</title>
+
+            <link rel="stylesheet" href="style.css">
+
+            
+
+
+    </head>
+
+    <body>
+        
+
+        <canvas id="canvas" style="z-index: -1; position: fixed;"></canvas>
+        
+        <div id="sidebar" style="z-index: 10;">
+            <input class="sidebar1" id="strokeWidthSlider" type="range" min="1" max="100" step="1" value="20"></input><br>
+            <button class="sidebar" id="defaultBrush" onclick="selectDefault()"></button>
+            <button class="sidebar" id="hueBrush" onclick="selectHue()"></button>
+            <button class="sidebar" id="eraser" onclick="selectEraser()"></button>
+            <button class="sidebar" id="resetCanvas" onclick="selectReset()"></button>
+            
+        </div>
+    <script src="index.js"></script>
+    
+    </body>
+</html>
