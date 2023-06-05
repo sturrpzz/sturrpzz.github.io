@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+            <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>Normal Canvas</title>
+
+            <link rel="stylesheet" href="style.css">
+
+            
+
+
+    </head>
+
+    <body>
+        
+
+        <canvas id="canvas" style="z-index: -1; position: fixed;"></canvas>
+        
+        <div id="sidebar" style="z-index: 10;">
+            <input class="sidebar1" id="strokeWidthSlider" type="range" min="1" max="100" step="1" value="20"></input><br>
+            <button class="sidebar" id="defaultBrush" onclick="selectDefault()" title="¿op uoʇʇnq sᴉɥʇ sǝop ʇɐɥM"></button>
+            <button class="sidebar" id="hueBrush" onclick="selectHue()" title="ʍoquᴉɐɹ ǝʞᴉl I"></button>
+            <button class="sidebar" id="eraser" onclick="selectEraser()" title="ᴉuoɹɐɔɐW"></button>
+            <button class="sidebar" id="resetCanvas" onclick="selectReset()" title="ʇɔnɹʇsǝp ɟlǝS"></button>
+        <a href="https://sturrpzz.github.io/im-Alice/a3/Assignment%203/laser%20beam/"><button class="sidebar" id="star" title="Laser beams"></button></a>
+        <a href="https://sturrpzz.github.io/im-Alice/a3/Assignment%203/stars/"><button class="sidebar" id="star" title="Afterimage"></button></a>
+            
+        </div>
+    <script src="index.js"></script>
+    
+    </body>
+</html>
