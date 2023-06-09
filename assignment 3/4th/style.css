@@ -1,0 +1,115 @@
+@font-face {
+    font-family: dotmatrix;
+    src: url(./led_dot_matrix/LED\ Dot-Matrix.ttf);
+}
+
+@font-face {
+  font-family: madeinfinity;
+  src: url(./made_infinity/MADEINFINITY\ PERSONALUSE-Regular.otf);
+}
+
+
+* {
+  background: black;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  color: hsl(230, 100%, 95%);
+  background: linear-gradient(135deg, hsl(0, 0%, 0%), hsl(230, 93%, 5%));
+}
+
+.machine {
+  color: #fff;
+  font-size: 100px;
+  font-family: dotmatrix;
+}
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+}
+
+
+h2 {
+  margin: 
+  font-size: 300px;
+  font-weight: 300;
+  animation: lights 5s 750ms linear infinite;
+}
+
+button {
+    border-color: #fff;
+    z-index: 100;
+    position: grid;
+    font-size: 50px;
+    padding: 8px;
+    background: transparent;
+    color: white;
+    opacity: 0.4;
+    margin-bottom: 50px;
+    color: #fff;
+  font-size: 55px;
+  font-family: madeinfinity;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#agree {
+  place-items: center;
+}
+
+button:hover {
+    opacity: 1;
+}

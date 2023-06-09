@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #130111ee;
+}
+.wrapper{
+  position: relative;
+  height: 1080px;
+  width: 1920px;
+  overflow: hidden;
+  background: #ffffff71;
+  border: 7px solid #eca9deb2;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+}
+.wrapper .images{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.window-close{
+  height: 100%;
+  width: 100%;
+  background: url("./images/window\ closed.png") no-repeat;
+}
+.window-open{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: url("./images/window\ open.png") no-repeat;
+}
+.wrapper .slider{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.wrapper .slider input{
+  width: 100%;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+.slider input::-webkit-slider-thumb{
+  height: 1080px;
+  width: 10px;
+  background: none;
+  -webkit-appearance: none;
+  cursor: col-resize;
+}
+.slider .drag-line{
+  width: 6px;
+  height: 965px;
+  position: absolute;
+  left: 49.5%;
+  pointer-events: none;
+}
+.slider .drag-line::before,
+.slider .drag-line::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 965px;
+  background: #0f37556e;
+}
+.slider .drag-line::before{
+  top: 0;
+}
+.slider .drag-line::after{
+  bottom: 0;
+}
+
+
+#laptop {
+  width: 550px;
+  height: 180px;
+  z-index: 101;
+  position: absolute;
+  background-color: transparent;
+  border-color: transparent;
+  left: 830px;
+  top: 900px;
+}
+
+#laptopimg {
+  width: 550px;
+  height: 180px;
+}
+
+#laptopopened {
+  width: 550px;
+  height: 350px;
+  z-index: 101;
+  position: absolute;
+  background-color: transparent;
+  border-color: transparent;
+  left: 831px;
+  top: 730px;
+  display: none;
+}
+
+#laptopopen {
+  /* display: none; */
+  width: 537px;
+  height: 350px;
+}
+
+.links {
+  z-index: 200;
+  display: none;
+  width: 30px;
+  height: 30px;
+  background: rgb(17, 116, 186);
+  position:absolute;
+  border-color: transparent;
+}
+
+#laserbeam {
+  top: 800px;
+  left: 1000px;
+}
+
+#normalcanvas {
+  top: 800px;
+  left: 1094px;
+}
+
+#star {
+  top: 800px;
+  left: 1185px;
+}
