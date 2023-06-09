@@ -9,8 +9,7 @@ let laptopopened = document.getElementById("laptopopened");
 
 //Clickable links
 let laserbeam = document.getElementById("laserbeam");
-let normalcanvas = document.getElementById("normalcanvas");
-let star = document.getElementById("star");
+
 
 
 let sliderVal;
@@ -38,8 +37,6 @@ function laptopChange() {
         laptop.style.display = 'none';
         laptopopened.style.display = 'inline-block';
         laserbeam.style.display = "inline-block";
-        normalcanvas.style.display = "inline-block";
-        star.style.display = "inline-block";
     }
 }
 
@@ -49,8 +46,6 @@ function laptopDefault() {
     if (laptopOpen == false) {
         laptop.style.display = 'inline-block';
         laptopopened.style.display = 'none';
-        normalcanvas.style.display = "none";
         laserbeam.style.display = "none";
-        star.style.display = "none";
     }
     }
