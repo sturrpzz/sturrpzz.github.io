@@ -178,7 +178,7 @@
         async function hideErrorImg() {
             const errorImg = document.getElementById('errorImg'); // Assuming you have an error image element
             errorImg.style.display = "none";
-            document.body.style.backgroundImage = "url('/images/network.png')"
+            document.body.style.backgroundImage = "url('images/network.png')"
             console.log('hiding error');
 
             try {
@@ -277,7 +277,7 @@
                 
                 // Load and display the fallback image
                 const img = new Image();
-                img.src = '/images/fallback.png'; // Set the path to your fallback image
+                img.src = 'images/fallback.png'; // Set the path to your fallback image
                 img.onload = () => {
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
                 };
