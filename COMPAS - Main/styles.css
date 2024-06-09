@@ -1,17 +1,17 @@
 @font-face {
     font-family: matrix;
-    src: url(/matrix/positivesystem.otf);
+    src: url(matrix/positivesystem.otf);
 }
 
 @font-face {
     font-family: bluescreen;
-    src: url(/matrix/bluescreen.ttf);
+    src: url(matrix/bluescreen.ttf);
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/images/behindbars.png');
+    background-image: url('images/behindbars.png');
     background-size: 100vw ;
     background-repeat: no-repeat;
     overflow: hidden;
