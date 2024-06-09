@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPAS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- <img src="images/fullscale.png" id="scalebtnhidden"> -->
+    <div id="ava">
+        <button id="scaleImg">
+            <img src="images/fullscale.png">
+        </button>
+        <button id="scaleBtn" onmouseover="hoverAva()" onmouseout="hoverOutAva()">
+            <img src="images/fullscale.png">
+        </button>
+    </div>
+    <button id="offbtn" onclick="clickOffBtn()">
+        <img src="images/offbutton.png">
+    </button>
+    <script>
+        let avatar = document.getElementById("ava");
+        let offbtn = document.getElementById("offbtn");
+        let scaleBtn = document.getElementById("scaleBtn");
+        let scaleImg = document.getElementById("scaleImg");
+
+        function clickOffBtn() {
+            if (scaleImg.style.display === "block") {
+                scaleImg.style.display = "none";
+                scaleBtn.style.display = "block";
+            } else {
+                scaleImg.style.display = "block";
+                scaleBtn.style.display = "none";
+            }
+        }
+
+        function hoverAva() {
+            document.body.style.background = "#640606";
+        }
+
+        function hoverOutAva() {
+            document.body.style.background = "linear-gradient(-45deg, #747474, #e2e2e2, #3d3d3d, #5a5556)";
+            document.body.style.backgroundSize = "400% 400%"; //?
+            document.body.style.animation = "gradient 10s ease infinite";
+            document.body.style.height = "100vh";
+        }
+    </script>
+</body>
+</html>

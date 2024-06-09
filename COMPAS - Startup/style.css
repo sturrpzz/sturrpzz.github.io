@@ -1,0 +1,70 @@
+body {
+	background: linear-gradient(-45deg, #747474, #e2e2e2, #3d3d3d, #5a5556);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+    transition: 1s;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#ava {
+    display: grid;
+    place-items: center;
+}
+
+#ava button {
+    background: transparent;
+    border: transparent;
+    /* display: none; */
+    position: static;
+    bottom: 0;
+}
+
+#ava button img {
+    width: 70%;
+    height: 70%;
+}
+
+#scaleImg {
+    filter: blur(4px); 
+    display: block;
+}
+
+#scaleBtn {
+    display: none;
+}
+
+button#scaleBtn:hover {
+    cursor: pointer;
+}
+
+#offbtn {
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+#offbtn {
+    background: transparent;
+    border: transparent;
+}
+
+#offbtn img {
+    width: 4%;
+    height: 4%;
+}
+
+#offbtn:hover {
+    cursor: pointer;
+}
