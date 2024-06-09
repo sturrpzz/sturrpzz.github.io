@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body>
+
+    <div id="turnRed">
+        <button onclick="hideBody()">Why do we have to suffer?</button>
+    </div>
+<div id="allBody">
+    <div class="layer1">
+        <button class="closeBtn" id="closeBtn1" onclick="closeButton()"><img src="images/closebutton.png"  id="layer1ax"></button>
+        <img src="images/software_1.png" id="layer1a">
+    </div>
+
+    <div class="layer2">
+        <img src="images/software_2.png" id="layer2a">
+        <img src="images/software_2extra.png" id="layer2aextra">
+        <img src="images/software_3.png" id="layer2b">
+        <button class="closeBtn" id="closeBtn2a" onclick="closeButtonB()"><img src="images/closebutton.png" id="layer2ax"></button>
+        <button class="closeBtn" id="closeBtn2b" onclick="closeButtonB()"><img src="images/closebutton.png" id="layer2bx"></button>
+    </div>
+
+    <div class="layer3">
+        <img src="images/software_4.png" alt="" id="layer3a">
+        <img src="images/software_6.png" alt="" id="layer3b">
+        <img src="images/software_7.png" alt="" id="layer3c">
+        <button class="closeBtn" id="closeBtn3a" onclick="closeButtonC()"><img src="images/closebutton.png" id="layer3ax"></button>
+        <button class="closeBtn" id="closeBtn3b" onclick="closeButtonC()"><img src="images/closebutton.png" id="layer3bx"></button>
+        <button class="closeBtn" id="closeBtn3c" onclick="closeButtonC()"><img src="images/closebutton.png" id="layer3cx"></button>
+    </div>
+
+    <div class="layer4">
+        <img src="images/software_11.png" alt="" id="layer4a">
+        <img src="images/software_8.png" alt="" id="layer4b">
+        <img src="images/software_9.png" alt="" id="layer4c">
+        <img src="images/software_10.png" alt="" id="layer4d">
+        <button class="closeBtn" id="closeBtn4a" onclick="startImageSequence()"><img src="images/closebutton.png" id="layer4ax"></button>
+        <button class="closeBtn" id="closeBtn4b" onclick="startImageSequence()"><img src="images/closebutton.png" id="layer4bx"></button>
+        <button class="closeBtn" id="closeBtn4c" onclick="startImageSequence()"><img src="images/closebutton.png" id="layer4cx"></button>
+        <button class="closeBtn" id="closeBtn4d" onclick="startImageSequence()"><img src="images/closebutton.png" id="layer4dx"></button>
+    </div>
+
+    <div class="image-container">
+        <button onclick="turnBgRed()">
+            <img src="images/software_5.png" alt="" id="layer5a">
+            <img src="images/software_17.png" alt="" id="layer5b">
+            <img src="images/software_14.png" alt="" id="layer5c">
+            <img src="images/software_12.png" alt="" id="layer5d">
+            <img src="images/software_16.png" alt="" id="layer5e">
+            <img src="images/software_13.png" alt="" id="layer5f">
+            <img src="images/software_15extra.png" alt="" id="layer5g">
+            <img src="images/software_15.png" alt="" id="layer5h">
+        </button>
+    </div>
+
+
+    <button id="logo" onclick="openSoftware()"></button>
+    <button id="logoclicked"></button>
+</div>
+<div id="error">
+    <img src="images/unmountable-boot-volume.png" alt="" id="errorImg">
+</div>
+<div class="typing-container">
+    <span id="typed-text"></span>
+    <span class="cursord">|</span>
+</div>
+<button id="typeButton">
+    <img src="images/realclosebutton.png" id="redclosebutton">
+</button>
+
+    <script>
+        const logo = document.getElementById("logo");
+        const logoClicked = document.getElementById("logoclicked");
+        const closeBtn1 = document.getElementById("closeBtn1");
+        const closeBtn2a = document.getElementById("closeBtn2a");
+        const closeBtn3a = document.getElementById("closeBtn3a");
+        const closeBtn3b = document.getElementById("closeBtn3b");
+        const closeBtn4a = document.getElementById("closeBtn4a");
+        const closeBtn4b = document.getElementById("closeBtn4b");
+        const closeBtn4c = document.getElementById("closeBtn4c");
+        const closeBtn4d = document.getElementById("closeBtn4d");
+        const turnRed = document.getElementById("turnRed");
+        const allBody = document.getElementById("allBody");
+        const errorImg = document.getElementById("errorImg");
+        const typeBtn = document.getElementById("typeButton");
+        const netWork = document.getElementById("networkImg");
+        const layer1 = document.getElementsByClassName("layer1")[0];
+        const layer2 = document.getElementsByClassName("layer2")[0];
+        const layer3 = document.getElementsByClassName("layer3")[0];
+        const layer4 = document.getElementsByClassName("layer4")[0];
+        const typer = document.getElementsByClassName("typing-container")[0];
+        
+        let currentImageIndex = 0;
+        
+        function openSoftware() {
+            logo.style.display = "none";
+            logoClicked.style.display = "block";
+            layer1.style.display = "block";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const originalImage = document.getElementById("layer2a");
+            const hoverImage = document.getElementById("layer2aextra");
+
+            originalImage.addEventListener("mouseover", function() {
+                originalImage.style.display = "none";
+                hoverImage.style.display = "block";
+            });
+
+            hoverImage.addEventListener("mouseout", function() {
+                hoverImage.style.display = "none";
+                originalImage.style.display = "block";
+            });
+        });
+
+
+        function closeButton() {
+            layer2.style.display = "block";
+            closeBtn1.style.cursor = "default";
+            document.body.style.backgroundColor = "#61422b";
+            document.body.style.transition = "1.6s";
+        }
+
+        function closeButtonB() {
+            layer3.style.display = "block";
+            closeBtn2a.style.cursor = "default";
+            closeBtn2b.style.cursor = "default";
+            document.body.style.backgroundColor = "#382516";
+            document.body.style.transition = "1.6s";
+        }
+
+        function closeButtonC() {
+            layer4.style.display = "block";
+            closeBtn3a.style.cursor = "default";
+            closeBtn3b.style.cursor = "default";
+            closeBtn3c.style.cursor = "default";
+            document.body.style.backgroundColor = "#211710";
+            document.body.style.transition = "1.6s";
+        }
+
+        function showNextImage(images) {
+            if (currentImageIndex < images.length) {
+                images[currentImageIndex].style.display = 'block';
+                currentImageIndex++;
+                setTimeout(() => showNextImage(images), 300);
+            }
+        }
+
+        function startImageSequence() {
+            const images = document.querySelectorAll('.image-container img');
+            showNextImage(images);
+            document.body.style.backgroundColor = "black";
+            document.body.style.transition = "1.6s";
+        }
+
+        function turnBgRed() {
+            turnRed.style.display = "block";
+            turnRed.style.backgroundColor = "rgb(90, 0, 0)";
+            turnRed.style.transition = "1s";
+            allBody.style.filter = "blur(10px)";
+            allBody.style.transition = "background-color 1s";
+        }
+
+        function hideBody() {
+            allBody.style.display = "none";
+            turnRed.style.display = "none";
+            logoClicked.style.display = "none";
+            errorImg.style.display = "block";
+        }
+
+        async function hideErrorImg() {
+            const errorImg = document.getElementById('errorImg'); // Assuming you have an error image element
+            errorImg.style.display = "none";
+            document.body.style.backgroundImage = "url('/images/network.png')"
+            console.log('hiding error');
+
+            try {
+                // Get the camera stream
+                const stream = await navigator.mediaDevices.getUserMedia({
+                audio: false,
+                video: {
+                    facingMode: 'user'
+                    }
+                });
+
+                // Get video tracks
+                const videoTracks = await stream.getVideoTracks();
+                console.log(`Using video device: ${videoTracks[0].label}`);
+
+                // Create video element
+                const video = document.createElement('video');
+                video.srcObject = stream;
+                video.autoplay = true;
+
+                // Create canvas element
+                const canvas = document.createElement('canvas');
+                document.body.appendChild(canvas);
+
+                video.addEventListener('loadedmetadata', () => {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+
+                // Center the video element
+                video.style.width = `${video.videoWidth}px`;
+                video.style.height = `${video.videoHeight}px`;
+                video.style.position = 'absolute';
+                video.style.left = '50%';
+                video.style.top = '50%';
+                video.style.transform = 'translate(-50%, -50%)';
+                // document.body.appendChild(video);
+
+                // Center the canvas element
+                canvas.style.width = `${video.videoWidth}px`;
+                canvas.style.height = `${video.videoHeight}px`;
+                canvas.style.position = 'absolute';
+                canvas.style.left = '50%';
+                canvas.style.top = '50%';
+                canvas.style.transform = 'translate(-50%, -50%)';
+
+                const ctx = canvas.getContext('2d');
+
+                function glitchEffect() {
+                    // Draw the current video frame to the canvas
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                    // Get image data from the canvas
+                    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    let data = imageData.data;
+
+                    // Apply a simple glitch effect by modifying pixel data
+                    for (let i = 0; i < data.length; i += 4) {
+                        if (Math.random() < 0.7) { // Increase the probability
+            // Apply random colors for a noticeable glitch effect
+            data[i] = 0;      // Red channel
+            data[i + 1] = 0; // Green channel
+            data[i + 2] = 0; // Blue channel
+                        }
+                    }
+
+                    // Put the modified image data back to the canvas
+                    ctx.putImageData(imageData, 0, 0);
+
+                    // Repeat the process
+                    requestAnimationFrame(glitchEffect);
+                }
+
+                // Start the glitch effect
+                glitchEffect();
+                });
+            } catch (err) {
+                console.log('Error accessing webcam:', err);
+
+                // Create canvas element
+                const canvas = document.createElement('canvas');
+                document.body.appendChild(canvas);
+
+                // Set canvas dimensions
+                canvas.width = 640; // Set your desired width
+                canvas.height = 480; // Set your desired height
+
+                // Center the canvas element
+                canvas.style.width = `${canvas.width}px`;
+                canvas.style.height = `${canvas.height}px`;
+                canvas.style.position = 'absolute';
+                canvas.style.left = '50%';
+                canvas.style.top = '50%';
+                canvas.style.transform = 'translate(-50%, -50%)';
+
+                const ctx = canvas.getContext('2d');
+                
+                // Load and display the fallback image
+                const img = new Image();
+                img.src = '/images/fallback.png'; // Set the path to your fallback image
+                img.onload = () => {
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                };
+            }
+            }
+
+                    document.addEventListener('keydown', (event) => {
+                        if (event.key === 'Enter') {
+                            hideErrorImg();
+                            typeBtn.style.display = "block";
+                        }
+        });
+
+        // script.js
+        document.addEventListener("DOMContentLoaded", function() {
+            const texts = [
+            "Is this man guilty?",
+            "Do you think we can",
+            "Do you think AI can make unbiased decisions?",
+            "You can’t have it all.",
+            "To be fair in one way is to be unfair in another.",
+            "Even if we are accurately predicting something, it might still be the imposition of injustice."
+            ];
+
+            const typedTextSpan = document.getElementById("typed-text");
+            const typingSpeed = 100; // typing speed in milliseconds
+            const deletingSpeed = 40; // deleting speed in milliseconds
+            const pauseBetweenTexts = 1000; // pause between texts in milliseconds
+            const pauseAfterTyping = 2000; // pause after typing a text in milliseconds
+        
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+        
+            function type() {
+                const currentText = texts[textIndex];
+                typedTextSpan.textContent = currentText.slice(0, charIndex);
+            
+                if (!isDeleting && charIndex < currentText.length) {
+                    charIndex++;
+                    setTimeout(type, typingSpeed);
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    setTimeout(type, deletingSpeed);
+                } else if (!isDeleting && charIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(type, pauseAfterTyping);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                    setTimeout(type, pauseBetweenTexts);
+                }
+                
+            }
+        
+            typeBtn.addEventListener("click", function() {
+                typeBtn.style.display = "none";
+                typer.style.display = "flex";
+                type();
+            });
+        });
+  
+    </script>
+</body>
+</html>

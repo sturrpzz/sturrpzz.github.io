@@ -1,0 +1,444 @@
+@font-face {
+    font-family: matrix;
+    src: url(/matrix/positivesystem.otf);
+}
+
+@font-face {
+    font-family: bluescreen;
+    src: url(/matrix/bluescreen.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/behindbars.png');
+    background-size: 100vw ;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+video, canvas {
+    position: absolute;
+    opacity: 0.75;
+}
+
+.typing-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    -webkit-text-fill-color: rgb(255, 255, 255); /* Will override color (regardless of order) */
+    z-index: 1000;
+    padding: 5px;
+    text-align: center;
+    font-family: bluescreen;
+    background-color: rgba(147, 0, 0, 0.74);
+  }
+  
+  #typeButton {
+    display: none;
+    margin: 10px;
+}
+
+  .cursord {
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+
+#error img {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    z-index: 10001;
+    display: none;
+}
+
+#turnRed {
+    display: none;
+    position: fixed;
+    background-color: transparent;
+    opacity: 0.8;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 500px;
+    
+}
+
+
+#turnRed button {
+    font-family: matrix;
+    font-size: 80px;
+    text-shadow: 0.05em 0 0 #0c4b4aaf, -0.03em -0.04em 0 #a00419,
+    0.025em 0.04em 0 #20085089;
+  animation: glitch 725ms infinite;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+  
+@keyframes glitch {
+    0% {
+      text-shadow: 0.05em 0 0 #472a09, -0.03em -0.04em 0 #8a060699,
+        0.025em 0.04em 0 #9f1b118d;
+    }
+    15% {
+        text-shadow: 0.05em 0 0 #472a09, -0.03em -0.04em 0 #8a060699,
+        0.025em 0.04em 0 #9f1b118d;
+    }
+    16% {
+      text-shadow: -0.05em -0.025em 0 #621204c4, 0.025em 0.035em 0 #680a6a81,
+        -0.05em -0.05em 0 #680404c4;
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 #621204c4, 0.025em 0.035em 0 #680a6a81,
+      -0.05em -0.05em 0 #680404c4;
+    }
+    50% {
+        text-shadow: 0.05em 0 0 #472a09, -0.03em -0.04em 0 #8a060699,
+        0.025em 0.04em 0 #9f1b118d;
+    }
+    99% {
+        text-shadow: 0.05em 0 0 #472a09, -0.03em -0.04em 0 #8a060699,
+        0.025em 0.04em 0 #9f1b118d;
+    }
+    100% {
+      text-shadow: -0.05em -0.025em 0 #621204c4, 0.025em 0.035em 0 #680a6a81,
+      -0.05em -0.05em 0 #680404c4;
+    }
+  }
+
+  
+#logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-image: url('images/logoclosed.png');
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    /* display: inline-block; */
+    z-index: 10000;
+}
+
+#logo:hover {
+    background-image: url('images/logoopened.png');
+}
+
+#logoclicked {width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-image: url('images/logoopened.png');
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    z-index: 10000;
+}
+
+.closeBtn {
+    background-color: transparent;
+    border: transparent;
+}
+
+.closeBtn img {
+    width: 27px;
+    height: 27px;
+}
+
+.layer1 {
+    display: none;
+    width: 500px;
+    position: absolute;
+}
+
+#layer1a {
+    position: relative;
+    z-index: 9;
+}
+
+
+#closeBtn1 {
+    position: absolute;
+    z-index: 10;
+    top: 37px;
+    left: 26px;
+    cursor: pointer;
+}
+
+.layer2 {
+    display: none;
+    position: relative;
+    top: 70px;
+    left: 0px;
+}
+
+#layer2a {
+    display: block;
+    z-index: 11;
+    position: relative;
+    top: 120px;
+    left: 30px;
+}
+
+#layer2aextra {
+    display: none;
+    z-index: 11;
+    position: relative;
+    top: 120px;
+    left: 30px;
+}
+
+#layer2ax {
+    z-index: 12;
+    position: absolute;
+    top: 158px;
+    left: 63px;
+    cursor: pointer;
+}
+
+#layer2b {
+    z-index: 11;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+
+#layer2bx {
+    z-index: 12;
+    position: absolute;
+    top: 98px;
+    right: 450px;
+    cursor: pointer;
+}
+
+.layer3 {
+    display: none;
+    position: relative;
+    top: -460px;
+    
+    left: 0px;
+}
+
+#layer3a {
+    z-index: 13;
+    position: absolute;
+    top: 30px;
+    left: 46px;
+}
+
+#layer3ax {
+    z-index: 14;
+    position: absolute;
+    top: 68px;
+    left: 78px;
+    cursor: pointer;
+}
+
+#layer3b {
+    z-index: 13;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+#layer3bx {
+    z-index: 14;
+    position: absolute;
+    top: 88px;
+    right: 490px;
+    cursor: pointer;
+}
+
+#layer3c {
+    z-index: 13;
+    position: absolute;
+    top: 350px;
+    left: 450px;
+}
+
+#layer3cx {
+    z-index: 14;
+    position: absolute;
+    top: 388px;
+    left: 483px;
+    cursor: pointer;
+}
+
+.layer4 {
+    display: none;
+    position: relative;
+    top: -400px;
+    left: -50px;
+    width: 1430px;
+    z-index: 15;
+}
+
+#layer4a {
+    z-index: 15;
+    position: absolute;
+    top: 90px;
+    left: 70px;
+}
+
+#layer4ax {
+    z-index: 16;
+    position: absolute;
+    top: 129px;
+    left: 103px;
+    cursor: pointer;
+}
+
+#layer4b {
+    z-index: 15;
+    position: absolute;
+    top: -70px;
+    left: 522px;
+}
+
+#layer4bx {
+    z-index: 16;
+    position: absolute;
+    top: -32px;
+    left: 557px;
+    cursor: pointer;
+}
+
+#layer4c {
+    z-index: 15;
+    position: absolute;
+    top: 234px;
+    right: 14px;
+}
+
+#layer4cx {
+    z-index: 16;
+    position: absolute;
+    top: 272px;
+    right: 453px;
+    cursor: pointer;
+}
+
+#layer4d {
+    z-index: 15;
+    position: absolute;
+    top: 280px;
+    left: 490px;
+}
+
+#layer4dx {
+    z-index: 16;
+    position: absolute;
+    top: 319px;
+    left: 525px;
+    cursor: pointer;
+}
+
+.image-container {
+    position: fixed;
+    z-index: 17;
+    top: -20px;
+    width: 1430px;
+}
+
+.image-container img {
+    display: none;
+}
+
+#layer5a {
+    position: absolute;
+    top: -20px;
+    left: -30px;
+}
+
+#layer5b {
+    position: absolute;
+    top: 350px;
+    right: -70px;
+}
+
+#layer5c {
+    position: absolute;
+    top: 370px;
+    right: 250px;
+}
+
+#layer5d {
+    position: absolute;
+    top: -10px;
+    right: -95px;
+}
+
+#layer5e {
+    position: absolute;
+    top: 220px;
+    left: 400px;
+}
+
+#layer5f {
+    position: absolute;
+    top: 130px;
+    left: 700px;
+}
+
+#layer5g {
+    position: absolute;
+    top: 360px;
+    left: -14px;
+}
+
+#layer5h {
+    position: absolute;
+    top: 380px;
+    left: 490px;
+}
+
+.image-container button {
+    cursor: pointer;
+}
+
+#typeButton{
+    position: absolute;
+    /* top: 5px;
+    left: 5px; */
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    width: 40px;
+    height: 40px;
+}
+
+#redclosebutton {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    
+    position: absolute;
+}
